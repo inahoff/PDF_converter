@@ -5,32 +5,41 @@
     <title>PDF-converter</title>
     <!--<script src="index.js"></script> -->
 
-    <script src="js/jsPDF/dist/jspdf.min.js"></script>
+    <!--<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+   </script> -->
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script type="module"> import { jsPDF }  from "jspdf.es.*.js"; </script>
 
-    <script> function Convert() {
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-        var doc = new jsPDF();
-
-        doc.text(20, 20, 'Hello world!');
-        doc.text(20, 30, 'This is client-side Javascript to generate a PDF.');
+   <script>
 
 
+       function Last_Ned() {
 
-        doc.save('document.pdf');
-    }
-    </script>
+
+           const doc = new jsPDF();
+
+           doc.text(20, 20, 'Hello world!');
+           doc.text(20, 30, 'This is client-side Javascript to generate a PDF.');
+
+           doc.save('document.pdf');
+       }
+   </script>
+
 
 </head>
 
 <body>
-    <div class="Knapp">
-        <p>Trykk her for å lage en pdf</p>
-        <br/>
-        <button onclick="Convert();">Last ned</button>
-        <br/> <br/>
-    </div>
+
+
+
+   <div class="Knapp">
+       <p>Trykk her for å lage en pdf</p>
+       <br/>
+       <button onclick="Last_Ned();"> Last ned </button>
+       <br/> <br/>
+   </div>
 
 </body>
 
